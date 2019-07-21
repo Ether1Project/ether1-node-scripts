@@ -42,7 +42,7 @@ echo 'Installing Ether-1 Node binary'
 echo '**************************'
 # Download node binary
 
-wget https://github.com/Ether1Project/Ether-1-SN-MN-Binaries/releases/download/1.2.0/Ether1-MN-SN-1.2.0.tar.gz
+wget https://github.com/Ether1Project/Ether-1-GN-Binaries/releases/download/0.0.9.1/Ether1-MN-SN-1.2.0.tar.gz
 
 tar -xzf Ether1-MN-SN-1.2.0.tar.gz
 
