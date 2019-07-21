@@ -42,7 +42,7 @@ echo 'Installing Ether-1 Node binary'
 echo '**************************'
 # Download node binary
 
-wget https://files.ether1.org/releases/Ether1-MN-SN-0.0.9.1.tar.gz
+wget https://github.com/Ether1Project/Ether-1-GN-Binaries/releases/download/0.0.9.1/Ether1-MN-SN-0.0.9.1.tar.gz
 
 tar -xzf Ether1-MN-SN-0.0.9.1.tar.gz
 
@@ -87,7 +87,7 @@ echo 'Masternode Setup Complete....Deploying IPFS'
 echo '**************************'
 
 cd /home/$_user
-wget https://files.ether1.org/releases/ipfs.tar.gz
+wget https://github.com/Ether1Project/Ether-1-GN-Binaries/releases/download/0.0.9.1/ipfs.tar.gz
 tar -xzf ipfs.tar.gz
 chmod +x ipfs
 
@@ -145,6 +145,9 @@ EOL
         ipfs bootstrap add /ip4/149.28.167.176/tcp/4001/ipfs/QmRwQ49Zknc2dQbywrhT8ArMDS9JdmnEyGGy4mZ1wDkgaX
         ipfs bootstrap add /ip4/140.82.54.221/tcp/4001/ipfs/QmeG81bELkgLBZFYZc53ioxtvRS8iNVzPqxUBKSuah2rcQ
         ipfs bootstrap add /ip4/45.77.170.137/tcp/4001/ipfs/QmTZsBNb7dfJJmwuAdXBjKZ7ZH6XbpestZdURWGJVyAmj2
+        ipfs bootstrap add /ip4/51.38.131.241/tcp/4001/ipfs/Qmf4oLLYAhkXv95ucVvUihnWPR66Knqzt9ee3CU6UoJKVu
+        ipfs bootstrap add /ip4/51.77.150.202/tcp/4001/ipfs/QmUEy4ScCYCgP6GRfVgrLDqXfLXnUUh4eKaS1fDgaCoGQJ
+        ipfs bootstrap add /ip4/142.44.246.43/tcp/4001/ipfs/QmPW8zExrEeno85Us3H1bk68rBo7N7WEhdpU9pC9wjQxgu
         sudo mv $HOME/.ipfs /home/$_user/
         sudo chown -R $_user:$_user /home/$_user/.ipfs
 
@@ -163,7 +166,7 @@ echo '**************************'
 echo 'IPFS Setup Complete....Deploying ethoFS'
 echo '**************************'
 cd /home/$_user
-wget https://files.ether1.org/releases/ethoFS.tar.gz
+wget https://github.com/Ether1Project/Ether-1-GN-Binaries/releases/download/0.0.9.1/ethoFS.tar.gz
 tar -xzf ethoFS.tar.gz
 chmod +x ethoFS
 
@@ -195,7 +198,7 @@ EOL
         sudo \mv /tmp/ethoFS.service /etc/systemd/system
         sudo \mv ethoFS /usr/sbin/
         sudo systemctl daemon-reload
-        sudo systemctl enable ethoFS && systemctl start ethoFS
+        sudo systemctl enable ethoFS && sudo systemctl start ethoFS
         sudo systemctl restart ethoFS
         sudo systemctl status ethoFS --no-pager --full
 echo '**************************'
