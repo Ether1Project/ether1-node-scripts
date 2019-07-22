@@ -56,7 +56,7 @@ sudo systemctl restart ether1node
 sudo systemctl status ether1node --no-pager --full
 
 echo '**************************'
-echo 'Masternode Setup Complete....Deploying IPFS'
+echo 'Gateway Setup Complete....Deploying IPFS'
 echo '**************************'
 
 cd /home/$_user
@@ -155,7 +155,7 @@ Group=$_user
 Type=simple
 Restart=always
 
-ExecStart=/usr/sbin/ethoFS -$_nodetype
+ExecStart=/usr/sbin/ethoFS -gatewaynode
 
 [Install]
 WantedBy=default.target
