@@ -157,7 +157,7 @@ Group=$_user
 Type=simple
 Restart=always
 
-ExecStart=/usr/sbin/ethoFS -$_nodetype
+ExecStart=/usr/sbin/ethoFS -masternode
 
 [Install]
 WantedBy=default.target
