@@ -44,7 +44,7 @@ Group=$_user
 Type=simple
 Restart=always
 
-ExecStart=/usr/sbin/geth --syncmode=fast --cache=512 --syncmode "light"
+ExecStart=/usr/sbin/geth --cache=512 --syncmode=light
 
 [Install]
 WantedBy=default.target
