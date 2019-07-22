@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 _user=${SUDO_USER:-$(whoami)}
 
+echo "ethoFS Gateway Node Setup Initiated"
+
 echo '**************************'
 echo 'Installing misc dependencies'
 echo '**************************'

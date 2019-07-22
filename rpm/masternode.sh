@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 _user="$(id -u -n)"
 
+echo "ethoFS Master Node Setup Initiated"
+
 echo '**************************'
 echo 'Installing misc dependencies'
 echo '**************************'
