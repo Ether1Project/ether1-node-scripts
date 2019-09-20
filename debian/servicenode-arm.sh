@@ -61,12 +61,14 @@ echo 'Servicenode Setup Complete....Deploying IPFS'
 echo '**************************'
 
 cd /home/$_user
-wget https://github.com/Ether1Project/Ether-1-GN-Binaries/releases/download/1.2.1/ipfs.tar.gz
-tar -xzf ipfs.tar.gz
+wget wget https://github.com/ipfs/go-ipfs/releases/download/v0.4.22/go-ipfs_v0.4.22_linux-arm.tar.gz
+
+tar -xvzf go-ipfs_v0.4.22_linux-arm.tar.gz
+cd go-ipfs
 chmod +x ipfs
 
 # Remove and cleanup
-rm ipfs.tar.gz
+rm /home/$_user/go-ipfs_v0.4.22_linux-arm.tar.gz
 
 echo '**************************'
 echo 'Creating and setting up IPFS system service'
@@ -161,7 +163,7 @@ EOL
 
 sudo systemctl stop ethoFS
 sudo \mv /tmp/ethoFS.service /etc/systemd/system
-sudo \mv ethoFS /usr/sbin/
+sudo \mv ethofs /usr/sbin/
 sudo systemctl daemon-reload
 sudo systemctl enable ethoFS && sudo systemctl start ethoFS
 sudo systemctl restart ethoFS
